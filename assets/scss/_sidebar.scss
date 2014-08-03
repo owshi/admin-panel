@@ -1,0 +1,76 @@
+aside {
+	float:left;
+	width: 185px;
+	background-color: $bg-grey;
+	ul {
+		margin-top: 30px;
+	}
+	ul:first-child {
+		margin: 0;
+	}
+	li {
+		@include box-shadow(0 1px 0 0 #4e515b);
+		border-bottom: 1px solid #242730;
+	}
+	a {
+		display: block;
+		padding: 15px 50px;
+		@include aside-font;
+	}
+	a:hover {
+		color: $h3+#333;
+	}
+	li.active {
+		background-color: $active-grey;
+		border-color:$active-grey;
+		box-shadow: none;
+
+		a {
+			color: $active;
+		}
+		a:hover {
+			color: $active+#333;
+		}
+		.topics { background-position: -23px 0px;  } 
+		.forum { background-position: -23px -33px;  } 
+		.comments { background-position: -23px -66px;  } 
+		.pages { background-position: -23px -99px;  } 
+		.media { background-position: -23px -132px;  } 
+		.users { background-position: -23px -165px;  } 
+		.posts { background-position: -23px -198px;  } 
+		.dashboard { background-position: -23px -231px;  } 
+		.tools { background-position: -23px -264px;  } 
+		.settings { background-position: -23px -297px;  } 
+		.plugins { background-position: -23px -330px;  } 
+		.appearance { background-position: -23px -363px;  } 
+		.replies { background-position: -23px -396px;  } 
+	}
+	i {
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 15px;
+		background: url(../img/icons/sprite.png) no-repeat top left;
+		width: 23px; height: 23px;
+	}
+	.count {
+		display: none;
+		top:12px;
+		right: 20px;
+		background-color: $aside-text;
+	}
+}
+
+.topics { background-position: 0px 0px;  } 
+.forum { background-position: 0px -33px;  } 
+.comments { background-position: 0px -66px;  } 
+.pages { background-position: 0px -99px;  } 
+.media { background-position: 0px -132px;  } 
+.users { background-position: 0px -165px;  } 
+.posts { background-position: 0px -198px;  } 
+.dashboard { background-position: 0px -231px;  } 
+.tools { background-position: 0px -264px;  } 
+.settings { background-position: 0px -297px;  } 
+.plugins { background-position: 0px -330px;  } 
+.appearance { background-position: 0px -363px;  } 
+.replies { background-position: 0px -396px;  } 

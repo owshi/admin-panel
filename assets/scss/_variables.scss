@@ -1,0 +1,99 @@
+//main block sizes
+$wrap: 1183px;
+
+
+//site colors
+$background: #eee;
+$active: #3ab7ae;
+$active-grey: #292d37;
+$bg-grey: #33363f;
+$notifications: #08736b;
+$succes: #6fc831;
+$fail: #ff5b65;
+$warning: #ffc800;
+$bookings: #64decf;
+$revenue: #cb93dd;
+$mail: #84c0eb;
+$sky-blue: #0b97d4;
+$orange: #fa682d;
+$green: #70bf64;
+$yellow: #ffcb38;
+$dark-grey: #4c4c4c;
+
+
+//font-sizes
+$xxl:24px;
+$xl:18px;
+$l: 14px;
+$m:14px;
+$s:12px;
+$xs: 10px;
+
+//font-colors
+$link: #869662;
+$link-hover: #d3d3d3;
+$aside-text: #636363;
+$h1: #464646;
+$h2: $bg-grey;
+$h3: #939393;
+$h4: #ccc;
+$h5: #f1f1f1;
+
+//vendor and fix mixins
+@mixin linear-gradient($gradient,$gradient2) {
+  background: -webkit-linear-gradient(($gradient,$gradient2));
+     background: -moz-linear-gradient(($gradient,$gradient2));
+      background: -ms-linear-gradient(($gradient,$gradient2));
+          background: linear-gradient(($gradient,$gradient2));
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($transition){
+  transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+}
+@mixin appearance-none{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+}
+@mixin box-shadow($shadow...){
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+      -ms-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+      -ms-transform: $transform;
+          transform: $transform;
+}
+@mixin clearfix {
+  &:after { 
+    content: ""; 
+    display: table; 
+    clear: both;
+  }
+}
+@mixin inlinefix {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+@mixin adaptive-bg($path){
+  background-image: url($path);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}

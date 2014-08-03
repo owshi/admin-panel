@@ -1,0 +1,143 @@
+body {
+	@include adaptive-bg('../img/bg.jpg');
+	@include main-font;
+}
+h2 {
+	@include h2;
+}
+h3 {
+	@include h3;
+}
+h4 {
+	@include h4;
+}
+h5 {
+	@include h5;
+}
+.wrapper {
+	width: $wrap;
+	margin:50px auto;
+	@include border-radius(5px);
+	@include box-shadow(0 0 40px 10px rgba(0,0,0,0.4));
+	background-color: #fff;
+	overflow: hidden;
+}
+.btn {
+	
+}
+#body {
+	background-color: $bg-grey;
+}
+.content {
+	color: $h2;
+	@include clearfix;
+	background-color: $background;
+	margin-left: 185px;
+	padding: 25px 25px 0 25px;
+	
+
+}
+.box {
+	background-color: #fff;
+	border-bottom: 3px solid $h4;
+	h2, h4 {
+		display: inline-block;
+		padding: 10px 0;
+	}
+}
+.box:hover {
+	border-color:  #3ec4ba;
+}
+.box .box:hover {
+	border-color: #ccc;
+}
+.pad {
+	padding: 0 15px;
+}
+.wrap {
+	padding:15px;
+}
+.box-wrap {
+	position: relative;
+	margin-bottom: 17px;
+}
+.window-control {
+	position: absolute;
+	top:0;
+	right:0;
+	border-left: 1px solid $h4;
+	a {
+		display: block;
+		float: left;
+		height: 34px;
+		padding: 0 12px;
+		opacity: 0.6;
+		i {
+			display: block;
+			margin-top: 11px;
+			height: 13px;
+			width: 14px;
+			background-image: url(../img/icons/control-sprite.png);
+			background-repeat: no-repeat;
+
+		}
+		
+	}
+	.minimize i {
+			background-position: 0 -13px;
+		}
+	a:hover {
+		opacity: 1;
+	}
+}
+
+.xs {
+	@include inlinefix;
+	width: 192px;
+	padding: 15px;
+	margin-left: 20px;
+	vertical-align: text-top;
+	h5 {
+		padding-top: 5px;
+	}
+	h3 {
+		padding-top: 15px;
+		span {
+			@include h5;
+		}
+	}
+	a {
+		@include transition(0.3s opacity ease-out);
+		display: block;
+		position: relative;
+		float: left;
+		width: 55px; height: 55px;
+		margin-right: 10px;
+		i {
+			display: block;
+			top: 10px;
+			left: 10px;
+			position: absolute;
+			background: url(../img/icons/sprite1.png) no-repeat;
+			width: 32px;
+			height: 32px;
+		}
+	}
+	a:hover {
+		opacity: 0.7
+	}
+		.bookings-bg i { background-position: 0px 0px;  } 
+		.mail-bg i { background-position: 0px -42px;  } 
+		.revenue-bg i { background-position: 0px -84px;  } 
+		.visitors-bg i { background-position: 0px -126px;  } 
+		.bookings-bg {background-color: $bookings}
+		.mail-bg {background-color: $mail}
+		.revenue-bg {background-color: $revenue}
+		.visitors-bg {background-color: $warning}
+}
+
+.xs:first-child {
+	margin: 0;
+}
+@import 'traffic-graph';
+@import 'visits';

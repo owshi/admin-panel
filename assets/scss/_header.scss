@@ -1,0 +1,67 @@
+ul li {
+	position: relative;
+}
+header {
+	display: block;
+	height: 60px;
+	@include linear-gradient($background 0%, ($background - #1c1c1c) 100%);
+
+	border-bottom: 6px solid #3ec4ba;
+	color: $h3
+}
+.logo {
+	float: left;
+	width: 185px;
+	height: 100%; 
+	@include linear-gradient(($background - #1c1c1c) 0%, $background 100%);
+	i {
+		display: block;
+		width: 185px;
+		height: 100%;
+		background-image: url(../img/logo.png);
+		background-size: 120px;
+		background-position: 20px 25px;
+		background-repeat: no-repeat;
+	}
+
+}
+.login-form, .user-form {
+	float: left;
+	width: 270px;
+	height: 100%;
+}
+
+.header-menu {
+	float: right;
+	width: 300px;
+	margin-right: 30px;
+	li {
+		display: inline-block;
+		*display: inline;
+		*zoom:1;
+	}
+	a {
+		display: inline-block;
+		padding-right: 35px;
+		height: 100%;
+		@include header-font;
+		vertical-align: middle;
+		line-height: 60px;
+		
+	}
+	a:hover {
+		color: $h3 - #333;
+	}
+	.count {
+		top: 20px;
+		right: 5px;
+	}
+}
+.count {
+	position: absolute;
+	@include border-radius(10px);
+	height: 20px;
+	width: 20px;
+	background-color: $active;
+	@include count-font;
+}

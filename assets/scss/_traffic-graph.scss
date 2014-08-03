@@ -1,0 +1,191 @@
+.traffic-graph {
+	img {
+		width: 100%;
+		padding-bottom: 10px;
+	}
+}
+.graph-map {
+	@include inlinefix;
+	margin-left: 30px;
+	li {
+		@include inlinefix;
+		margin: 0 10px;
+	}
+	a {
+		position: relative;
+		@include h5;
+		letter-spacing: -.01em;
+		font-weight: bold;
+		padding-left: 15px;
+		i {
+			display: block;
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: $sky-blue;
+			top: 2px;
+		}
+	}
+}
+.btn-group {
+	float: right;
+}
+.graph-date-btn {
+	margin-top: 5px;
+	li {
+		@include inlinefix;
+		border: 1px solid $h4;
+
+	}
+	li:first-child {
+		@include border-radius(4px 0 0 4px);
+	}
+	li:last-child {
+		@include border-radius(0 4px 4px 0);
+	}
+	a {
+		display: block;
+		padding: 5px 12px;
+		@include h4;
+	}
+	a:hover {
+		background-color: $h5;
+	}
+	li.active a {
+		@extend a:hover;
+		font-weight: bold;
+	}
+}
+.graph-canvas {
+	position: relative;
+	margin-top: 10px;
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+}
+.graph-body {
+	@include transform(translateY(-120px));
+}
+.graph-line {
+	display: block;
+	width: inherit;
+	border-top: 1px dashed $h5;
+	.visit-amount {
+		@include inlinefix;
+		@include h4;
+		padding: 16px 0 30px 0;
+	}
+}
+.graph-data-wrap {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+}
+.graph-data {
+	position: absolute;
+	width: 100%;
+	height: 250px;
+	@include transform(translateY(120px));
+}
+.graph-item {
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		@include border-radius(50%);
+		border:1px solid $sky-blue;
+		background-color: #fff;
+		cursor: pointer;
+	.graph-item-description {
+		display: none;
+		position: absolute;
+		width: 155px;
+		height: 40px;
+		background-color: $dark-grey;
+		@include transform(translateX(15px) translateY(-16px));
+		@include h5-white;
+		z-index: 5;
+		.description-left {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 65px;
+			@extend .pad;
+			height: 100%;
+			span {
+				@include inlinefix;
+				padding-top: 5px;
+			}
+		}
+		.stat-percentage {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 45px;
+			padding-left: 20px;
+			height: 100%;
+			font-size: 16px;
+			background-color: $sky-blue;
+			span {
+				display: block;
+				position: relative;
+				padding-top: 10px;
+				i {
+					display: block;
+					position: absolute;
+					height: 14px;
+					width: 10px;
+					top: 10px;
+					left: -10px;
+					background-image: url(../img/icons/arrow-sprite.png);
+				}
+			}
+		}
+	}
+	.graph-item-description:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 15px;
+		left: -5px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5px 5px 5px 0;
+		border-color: transparent $dark-grey transparent transparent;
+		z-index: 5;
+	}
+}
+.graph-item:hover {
+	background-color: $sky-blue;
+	.graph-item-description {
+		display: block;
+	}
+}
+.graph-item.active {
+	@extend .graph-item:hover;
+}
+.graph-date-wrap {
+	width: 100%;
+	overflow: hidden;
+}
+.graph-date {
+	padding-left: 100px;
+	width: 10000px;
+	li {
+		@include inlinefix;
+		margin-left: 250px;
+	}
+	li:first-child {
+		margin-left: 50px;
+	}
+	a {
+		display: block;
+		padding: 10px 0;
+		@include h5;
+		font-weight: bold;
+	}
+}

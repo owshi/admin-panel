@@ -1,0 +1,66 @@
+@font-face {
+	font-family: "HelveticaCEThin";
+	font-weight:100;
+	src: url(../fonts/HelveticaNeueCyr-Thin.otf);
+}
+@font-face {
+	font-family: "HelveticaCE Roman";
+	font-weight:100;
+	src: url(../fonts/HelveticaNeueCyr-Roman.otf);
+}
+@font-face {
+	font-family: "HelveticaCE Medium";
+	font-weight:100;
+	src: url(../fonts/HelveticaNeueCyr-Medium.otf);
+}
+@font-face {
+	font-family: "HelveticaCE Bold";
+	font-weight:100;
+	src: url(../fonts/HelveticaNeueCyr-Bold.otf);
+}
+
+
+
+
+@mixin main-font {
+	font: 14px/1 'Helvetica', sans-serif;
+	color: #000;
+}
+
+@mixin count-font {
+	font: 10px/20px 'HelveticaCE Roman', sans-serif;
+	color: #fff;
+	text-align: center;
+}
+@mixin header-font {
+	font: 14px/1 'HelveticaCE Roman', sans-serif;
+	color: $h3;
+}
+@mixin aside-font {
+	font: 14px/1 'HelveticaCE Medium', sans-serif;
+	color: $h3;
+}
+
+@mixin h2 {
+	font: 14px/1 'HelveticaCE Medium', sans-serif;
+	color: #000;
+}
+
+@mixin h3 {
+	font: 24px/1 'HelveticaCEThin', sans-serif;
+	color:$h3;
+}
+
+@mixin h4 {
+	font: 14px/1 'HelveticaCE roman', sans-serif;
+	color: #000;
+}
+
+@mixin h5 {
+	font: 11px/1 'Helvetica', sans-serif;
+	color: #000;
+}
+@mixin h5-white {
+	font: 12px/1 'Helvetica', sans-serif;
+	color: #fff;
+}
